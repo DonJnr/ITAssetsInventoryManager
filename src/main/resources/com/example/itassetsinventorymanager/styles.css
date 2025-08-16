@@ -1,0 +1,44 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom right, #A020F0, #914385);
+}
+
+.loginForm {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15px;
+}
+
+.usernameField, .passwordField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent black transparent;
+}
+
+/*#614385, #616395*/
+.loginButton {
+    -fx-background-color: linear-gradient(to bottom right, #614385, #616395);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.loginButton:hover {
+    -fx-background-color: linear-gradient(to bottom right, #A020F0, #914385);
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.menuButtonsPane {
+    -fx-background-color: linear-gradient(to bottom right, #614385, #616395);
+}
+
+.menuButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: white;
+    -fx-font-size: large;
+    -fx-font-weight: bold;
+
+}
+
+.menuButton:hover {
+    -fx-background-color: linear-gradient(to bottom right, #614385, #616395);
+}
