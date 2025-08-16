@@ -1,12 +1,16 @@
 package com.example.itassetsinventorymanager;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -23,6 +27,7 @@ public class AdminViewController implements Initializable {
     @FXML private Button logoutButton;  // fx:id="logoutButton"
 
     /* Anchor Panes */
+    @FXML private AnchorPane adminViewPane;
     //@FXML private AnchorPane menuButtonsPane;   // fx:id="menuButtonsPane"
     @FXML private AnchorPane dashboardPane;   // fx:id="dashboardPane"
     @FXML private AnchorPane disposalPane;    // fx:id="disposalPane"
@@ -87,5 +92,13 @@ public class AdminViewController implements Initializable {
 
         usersTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
+    }
+
+    @FXML protected void logout() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("loginView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = (Stage) adminViewPane.getScene().getWindow();
+        stage.setScene(scene);
+        stage.setResizable(false);
     }
 }
